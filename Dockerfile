@@ -4,7 +4,7 @@ ENV PKG_URL=http://download.cloudstack.org/centos/7/4.11/
 RUN rpm -i https://dev.mysql.com/get/Downloads/Connector-Python/mysql-connector-python-8.0.13-1.el7.x86_64.rpm \
     && yum install -y nc wget \
     ${PKG_URL}/cloudstack-common-4.11.1.0-1.el7.centos.x86_64.rpm \
-    ${PKG_URL}/cloudstack-management-4.11.1.0-1.el7.centos.x86_64.rpm
+    ${PKG_URL}/cloudstack-management-4.11.1.0-1.el7.centos.x86_64.rpm \
     && cd /etc/cloudstack/management; \
     && ln -s tomcat7-nonssl.conf tomcat7.conf; \
     && ln -s server-nonssl.xml server.xml; \
