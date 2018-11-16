@@ -5,10 +5,10 @@ RUN rpm -i https://dev.mysql.com/get/Downloads/Connector-Python/mysql-connector-
     && yum install -y nc wget \
     ${PKG_URL}/cloudstack-common-4.11.1.0-1.el7.centos.x86_64.rpm \
     ${PKG_URL}/cloudstack-management-4.11.1.0-1.el7.centos.x86_64.rpm \
-    && cd /etc/cloudstack/management; \
-    && ln -s tomcat7-nonssl.conf tomcat7.conf; \
-    && ln -s server-nonssl.xml server.xml; \
-    #&& ln -s log4j-cloud.xml log4j.xml; \
+    && cd /etc/cloudstack/management \
+    && ln -s tomcat7-nonssl.conf tomcat7.conf \
+    && ln -s server-nonssl.xml server.xml \
+    #&& ln -s log4j-cloud.xml log4j.xml \
     && wget -O /usr/share/cloudstack-common/scripts/vm/hypervisor/xenserver/vhd-util \
     http://download.cloudstack.org/tools/vhd-util
 COPY init.sh_centos7 /root/init.sh
